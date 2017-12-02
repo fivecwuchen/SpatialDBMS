@@ -83,6 +83,112 @@ namespace SpatialDBMS
             axToolbarControl2.SetBuddyControl(axMapControl1);
         }
 
+        private void axMapControl1_OnMouseMove(object sender, IMapControlEvents2_OnMouseMoveEvent e)
+        {
+            // 显示当前比例尺
+            this.StatusScale.Text = " 比例尺 1:" + ((long)this.axMapControl1.MapScale).ToString();
+            // 显示当前坐标
+            this.StatusCoordinate.Text = " 当前坐标 X = " + e.mapX.ToString() + " Y = " + e.mapY.ToString() + " " + this.axMapControl1.MapUnits;
+        }
+
+        private void axTOCControl1_OnMouseDown(object sender, ITOCControlEvents_OnMouseDownEvent e)
+        {
+            esriTOCControlItem item = new esriTOCControlItem();
+            IBasicMap pMap = null;
+            ILayer pLayer = new FeatureLayer();
+            object pOther = new object();
+            object pIndex = new object();
+            //获取鼠标点击信息   
+            axTOCControl1.HitTest(e.x, e.y, ref item, ref pMap, ref pLayer, ref pOther, ref pIndex);
+            if (e.button == 2)
+            {
+                if (item == esriTOCControlItem.esriTOCControlItemMap)
+                {
+                    pTocControl.SelectItem(pMap, null);
+                }
+                else
+                {
+                    pTocControl.SelectItem(pLayer, null);
+                }
+                //设置CustomProperty为layer (用于自定义的Layer命令)   
+                pMapControl.CustomProperty = pLayer;
+                //弹出右键菜单   
+                if (item == esriTOCControlItem.esriTOCControlItemLayer)
+                {
+                    //动态添加OpenAttributeTable菜单项
+                    pToolMenuLayer.AddItem(new OpenAttribute(pLayer, pMapControl, axMapControl1), -1, 2, true, esriCommandStyles.esriCommandStyleTextOnly);
+                    pToolMenuLayer.PopupMenu(e.x, e.y, pTocControl.hWnd);
+                    //移除OpenAttributeTable菜单项，以防止重复添加
+                    pToolMenuLayer.Remove(2);
+                }
+                if (item == esriTOCControlItem.esriTOCControlItemMap)
+                {
+                    pToolMenuMap.PopupMenu(e.x, e.y, pTocControl.hWnd);
+                }
+
+                else
+                {
+                    pToolMenuLayer.PopupMenu(e.x, e.y, pTocControl.hWnd);
+                }
+            }
+
+            esriTOCControlItem item1 = esriTOCControlItem.esriTOCControlItemNone;
+            if (e.button == 1)
+            {
+                IBasicMap map = null;
+                ILayer layer = null;
+                object other = null;
+                object index = null;
+
+                m_TOCControl.HitTest(e.x, e.y, ref item1, ref map, ref layer, ref other, ref index);
+                if (item1 == esriTOCControlItem.esriTOCControlItemLayer)
+                {
+                    if (layer is IAnnotationSublayer)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        pMoveLayer = layer;
+                    }
+                }
+
+            }
+        }
+
+        private void axTOCControl1_OnMouseUp(object sender, ITOCControlEvents_OnMouseUpEvent e)
+        {
+            if (e.button == 1)
+            {
+                esriTOCControlItem item = esriTOCControlItem.esriTOCControlItemNone;
+                IBasicMap map = null;
+                ILayer layer = null;
+                object other = null;
+                object index = null;
+
+                m_TOCControl.HitTest(e.x, e.y, ref item, ref map, ref layer, ref other, ref index);
+                IMap pMap = this.axMapControl1.ActiveView.FocusMap;
+                if (item == esriTOCControlItem.esriTOCControlItemLayer || layer != null)
+                {
+                    if (pMoveLayer != null)
+                    {
+                        ILayer pTempLayer;
+                        for (int i = 0; i < pMap.LayerCount; i++)
+                        {
+                            pTempLayer = pMap.get_Layer(i);
+                            if (pTempLayer == layer)
+                            {
+                                toIndex = i;
+                            }
+                        }
+                        pMap.MoveLayer(pMoveLayer, toIndex);
+                        axMapControl1.ActiveView.Refresh();
+                        m_TOCControl.Update();
+                    }
+                }
+            }
+        }
+
         private void menuOpenFile_Click(object sender, EventArgs e)
         {            
             //定义OpenFileDialog，获取并打开地图文档
@@ -251,110 +357,6 @@ namespace SpatialDBMS
 
         }
 
-        private void axMapControl1_OnMouseMove(object sender, IMapControlEvents2_OnMouseMoveEvent e)
-        {
-            // 显示当前比例尺
-            this.StatusScale.Text = " 比例尺 1:" + ((long)this.axMapControl1.MapScale).ToString();
-            // 显示当前坐标
-            this.StatusCoordinate.Text = " 当前坐标 X = " + e.mapX.ToString() + " Y = " + e.mapY.ToString() + " " + this.axMapControl1.MapUnits;
-        }
-
-        private void axTOCControl1_OnMouseDown(object sender, ITOCControlEvents_OnMouseDownEvent e)
-        {
-            esriTOCControlItem item = new esriTOCControlItem();
-            IBasicMap pMap = null;
-            ILayer pLayer = new FeatureLayer();
-            object pOther = new object();
-            object pIndex = new object();
-            //获取鼠标点击信息   
-            axTOCControl1.HitTest(e.x, e.y, ref item, ref pMap, ref pLayer, ref pOther, ref pIndex);
-            if (e.button == 2)
-            {
-                if (item == esriTOCControlItem.esriTOCControlItemMap)
-                {
-                    pTocControl.SelectItem(pMap, null);
-                }
-                else
-                {
-                    pTocControl.SelectItem(pLayer, null);
-                }
-                //设置CustomProperty为layer (用于自定义的Layer命令)   
-                pMapControl.CustomProperty = pLayer;
-                //弹出右键菜单   
-                if (item == esriTOCControlItem.esriTOCControlItemLayer)
-                {
-                    //动态添加OpenAttributeTable菜单项
-                    pToolMenuLayer.AddItem(new OpenAttribute(pLayer, pMapControl, axMapControl1), -1, 2, true, esriCommandStyles.esriCommandStyleTextOnly);
-                    pToolMenuLayer.PopupMenu(e.x, e.y, pTocControl.hWnd);
-                    //移除OpenAttributeTable菜单项，以防止重复添加
-                    pToolMenuLayer.Remove(2);
-                }
-                if (item == esriTOCControlItem.esriTOCControlItemMap)
-                {
-                    pToolMenuMap.PopupMenu(e.x, e.y, pTocControl.hWnd);
-                }
-
-                else
-                {
-                    pToolMenuLayer.PopupMenu(e.x, e.y, pTocControl.hWnd);
-                }
-            }
-
-            esriTOCControlItem item1 = esriTOCControlItem.esriTOCControlItemNone;
-            if (e.button == 1)
-            {
-                IBasicMap map = null;
-                ILayer layer = null;
-                object other = null;
-                object index = null;
-
-                m_TOCControl.HitTest(e.x, e.y, ref item1, ref map, ref layer, ref other, ref index);
-                if (item1 == esriTOCControlItem.esriTOCControlItemLayer)
-                {
-                    if (layer is IAnnotationSublayer)
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        pMoveLayer = layer;
-                    }
-                }
-
-            }
-        }
-
-        private void axTOCControl1_OnMouseUp(object sender, ITOCControlEvents_OnMouseUpEvent e)
-        {
-            if (e.button == 1)
-            {
-                esriTOCControlItem item = esriTOCControlItem.esriTOCControlItemNone;
-                IBasicMap map = null;
-                ILayer layer = null;
-                object other = null;
-                object index = null;
-
-                m_TOCControl.HitTest(e.x, e.y, ref item, ref map, ref layer, ref other, ref index);
-                IMap pMap = this.axMapControl1.ActiveView.FocusMap;
-                if (item == esriTOCControlItem.esriTOCControlItemLayer || layer != null)
-                {
-                    if (pMoveLayer != null)
-                    {
-                        ILayer pTempLayer;
-                        for (int i = 0; i < pMap.LayerCount; i++)
-                        {
-                            pTempLayer = pMap.get_Layer(i);
-                            if (pTempLayer == layer)
-                            {
-                                toIndex = i;
-                            }
-                        }
-                        pMap.MoveLayer(pMoveLayer, toIndex);
-                        axMapControl1.ActiveView.Refresh();
-                        m_TOCControl.Update();
-                    }
-                }
-            }
-        }
+       
     }
 }
