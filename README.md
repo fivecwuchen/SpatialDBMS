@@ -1,3 +1,4 @@
 # SpatialDBMS
-it is a gis class work
-it aim to manager spatial data
+It is a gis class work.
+
+And it aim to manager spatial data.
