@@ -98,15 +98,29 @@
             this.menuCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTimeCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCoordinateCheck = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAttributeCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTopologyCheck = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuLocationCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLineIntersectCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLineCloseCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAreaCloseCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuIncludeAnaCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSurfaceCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLineThornCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAreaThornCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAreaHollowCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLittleAreaCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLittleLineCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFormatCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuWholeCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMapunitWholeCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFeatureWholeCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPosQuaCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExtentCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStatistic = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUserManager = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.axToolbarControl1 = new ESRI.ArcGIS.Controls.AxToolbarControl();
             this.axToolbarControl2 = new ESRI.ArcGIS.Controls.AxToolbarControl();
+            this.menuRasterQuaCheck = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -261,9 +275,7 @@
             this.axTOCControl1.Name = "axTOCControl1";
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
             this.axTOCControl1.Size = new System.Drawing.Size(134, 540);
-            this.axTOCControl1.TabIndex = 1;
-            this.axTOCControl1.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.axTOCControl1_OnMouseDown);
-            this.axTOCControl1.OnMouseUp += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseUpEventHandler(this.axTOCControl1_OnMouseUp);
+            this.axTOCControl1.TabIndex = 0;
             // 
             // splitContainer3
             // 
@@ -323,11 +335,11 @@
             // axLicenseControl1
             // 
             this.axLicenseControl1.Enabled = true;
-            this.axLicenseControl1.Location = new System.Drawing.Point(405, 103);
+            this.axLicenseControl1.Location = new System.Drawing.Point(612, 3);
             this.axLicenseControl1.Name = "axLicenseControl1";
             this.axLicenseControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl1.OcxState")));
             this.axLicenseControl1.Size = new System.Drawing.Size(32, 32);
-            this.axLicenseControl1.TabIndex = 2;
+            this.axLicenseControl1.TabIndex = 3;
             // 
             // axMapControl1
             // 
@@ -336,8 +348,7 @@
             this.axMapControl1.Name = "axMapControl1";
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
             this.axMapControl1.Size = new System.Drawing.Size(693, 540);
-            this.axMapControl1.TabIndex = 1;
-            this.axMapControl1.OnMouseMove += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseMoveEventHandler(this.axMapControl1_OnMouseMove);
+            this.axMapControl1.TabIndex = 2;
             // 
             // tabPage4
             // 
@@ -392,7 +403,7 @@
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -645,10 +656,12 @@
             this.menuCheck.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuTimeCheck,
             this.menuCoordinateCheck,
-            this.menuAttributeCheck,
             this.menuTopologyCheck,
-            this.menuLocationCheck,
-            this.menuSurfaceCheck});
+            this.menuSurfaceCheck,
+            this.menuFormatCheck,
+            this.menuWholeCheck,
+            this.menuPosQuaCheck,
+            this.menuRasterQuaCheck});
             this.menuCheck.Name = "menuCheck";
             this.menuCheck.Size = new System.Drawing.Size(68, 29);
             this.menuCheck.Text = "质量控制";
@@ -665,31 +678,125 @@
             // 
             this.menuCoordinateCheck.Name = "menuCoordinateCheck";
             this.menuCoordinateCheck.Size = new System.Drawing.Size(160, 22);
-            this.menuCoordinateCheck.Text = "坐标检查";
-            // 
-            // menuAttributeCheck
-            // 
-            this.menuAttributeCheck.Name = "menuAttributeCheck";
-            this.menuAttributeCheck.Size = new System.Drawing.Size(160, 22);
-            this.menuAttributeCheck.Text = "属性检查";
+            this.menuCoordinateCheck.Text = "坐标系检查";
             // 
             // menuTopologyCheck
             // 
+            this.menuTopologyCheck.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuLineIntersectCheck,
+            this.menuLineCloseCheck,
+            this.menuAreaCloseCheck,
+            this.menuIncludeAnaCheck});
             this.menuTopologyCheck.Name = "menuTopologyCheck";
             this.menuTopologyCheck.Size = new System.Drawing.Size(160, 22);
-            this.menuTopologyCheck.Text = "拓扑一致性检查";
+            this.menuTopologyCheck.Text = "拓扑检查";
             // 
-            // menuLocationCheck
+            // menuLineIntersectCheck
             // 
-            this.menuLocationCheck.Name = "menuLocationCheck";
-            this.menuLocationCheck.Size = new System.Drawing.Size(160, 22);
-            this.menuLocationCheck.Text = "位置精度检查";
+            this.menuLineIntersectCheck.Name = "menuLineIntersectCheck";
+            this.menuLineIntersectCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuLineIntersectCheck.Text = "线要素相接检查";
+            // 
+            // menuLineCloseCheck
+            // 
+            this.menuLineCloseCheck.Name = "menuLineCloseCheck";
+            this.menuLineCloseCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuLineCloseCheck.Text = "线闭合检查";
+            // 
+            // menuAreaCloseCheck
+            // 
+            this.menuAreaCloseCheck.Name = "menuAreaCloseCheck";
+            this.menuAreaCloseCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuAreaCloseCheck.Text = "面闭合检查";
+            // 
+            // menuIncludeAnaCheck
+            // 
+            this.menuIncludeAnaCheck.Name = "menuIncludeAnaCheck";
+            this.menuIncludeAnaCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuIncludeAnaCheck.Text = "包含检查";
             // 
             // menuSurfaceCheck
             // 
+            this.menuSurfaceCheck.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuLineThornCheck,
+            this.menuAreaThornCheck,
+            this.menuAreaHollowCheck,
+            this.menuLittleAreaCheck,
+            this.menuLittleLineCheck});
             this.menuSurfaceCheck.Name = "menuSurfaceCheck";
             this.menuSurfaceCheck.Size = new System.Drawing.Size(160, 22);
-            this.menuSurfaceCheck.Text = "表征精度检查";
+            this.menuSurfaceCheck.Text = "表征质量检查";
+            // 
+            // menuLineThornCheck
+            // 
+            this.menuLineThornCheck.Name = "menuLineThornCheck";
+            this.menuLineThornCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuLineThornCheck.Text = "线折刺检查";
+            // 
+            // menuAreaThornCheck
+            // 
+            this.menuAreaThornCheck.Name = "menuAreaThornCheck";
+            this.menuAreaThornCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuAreaThornCheck.Text = "面折刺检查";
+            // 
+            // menuAreaHollowCheck
+            // 
+            this.menuAreaHollowCheck.Name = "menuAreaHollowCheck";
+            this.menuAreaHollowCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuAreaHollowCheck.Text = "面空洞检查";
+            // 
+            // menuLittleAreaCheck
+            // 
+            this.menuLittleAreaCheck.Name = "menuLittleAreaCheck";
+            this.menuLittleAreaCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuLittleAreaCheck.Text = "碎面检查";
+            // 
+            // menuLittleLineCheck
+            // 
+            this.menuLittleLineCheck.Name = "menuLittleLineCheck";
+            this.menuLittleLineCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuLittleLineCheck.Text = "碎线检查";
+            // 
+            // menuFormatCheck
+            // 
+            this.menuFormatCheck.Name = "menuFormatCheck";
+            this.menuFormatCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuFormatCheck.Text = "格式一致性检查";
+            // 
+            // menuWholeCheck
+            // 
+            this.menuWholeCheck.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuMapunitWholeCheck,
+            this.menuFeatureWholeCheck});
+            this.menuWholeCheck.Name = "menuWholeCheck";
+            this.menuWholeCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuWholeCheck.Text = "完备性检查";
+            // 
+            // menuMapunitWholeCheck
+            // 
+            this.menuMapunitWholeCheck.Name = "menuMapunitWholeCheck";
+            this.menuMapunitWholeCheck.Size = new System.Drawing.Size(124, 22);
+            this.menuMapunitWholeCheck.Text = "图幅检查";
+            // 
+            // menuFeatureWholeCheck
+            // 
+            this.menuFeatureWholeCheck.Name = "menuFeatureWholeCheck";
+            this.menuFeatureWholeCheck.Size = new System.Drawing.Size(124, 22);
+            this.menuFeatureWholeCheck.Text = "要素检查";
+            // 
+            // menuPosQuaCheck
+            // 
+            this.menuPosQuaCheck.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuExtentCheck});
+            this.menuPosQuaCheck.Name = "menuPosQuaCheck";
+            this.menuPosQuaCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuPosQuaCheck.Text = "位置精度检查";
+            // 
+            // menuExtentCheck
+            // 
+            this.menuExtentCheck.Name = "menuExtentCheck";
+            this.menuExtentCheck.Size = new System.Drawing.Size(124, 22);
+            this.menuExtentCheck.Text = "边界检查";
             // 
             // menuStatistic
             // 
@@ -715,21 +822,27 @@
             // 
             // axToolbarControl1
             // 
-            this.axToolbarControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.axToolbarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axToolbarControl1.Location = new System.Drawing.Point(0, 0);
             this.axToolbarControl1.Name = "axToolbarControl1";
             this.axToolbarControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl1.OcxState")));
             this.axToolbarControl1.Size = new System.Drawing.Size(1031, 28);
-            this.axToolbarControl1.TabIndex = 1;
+            this.axToolbarControl1.TabIndex = 0;
             // 
             // axToolbarControl2
             // 
-            this.axToolbarControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.axToolbarControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axToolbarControl2.Location = new System.Drawing.Point(0, 0);
             this.axToolbarControl2.Name = "axToolbarControl2";
             this.axToolbarControl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl2.OcxState")));
             this.axToolbarControl2.Size = new System.Drawing.Size(1031, 28);
-            this.axToolbarControl2.TabIndex = 2;
+            this.axToolbarControl2.TabIndex = 0;
+            // 
+            // menuRasterQuaCheck
+            // 
+            this.menuRasterQuaCheck.Name = "menuRasterQuaCheck";
+            this.menuRasterQuaCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuRasterQuaCheck.Text = "影像质量检查";
             // 
             // MainForm
             // 
@@ -838,9 +951,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuCheck;
         private System.Windows.Forms.ToolStripMenuItem menuTimeCheck;
         private System.Windows.Forms.ToolStripMenuItem menuCoordinateCheck;
-        private System.Windows.Forms.ToolStripMenuItem menuAttributeCheck;
         private System.Windows.Forms.ToolStripMenuItem menuTopologyCheck;
-        private System.Windows.Forms.ToolStripMenuItem menuLocationCheck;
         private System.Windows.Forms.ToolStripMenuItem menuSurfaceCheck;
         private System.Windows.Forms.ToolStripMenuItem menuStatistic;
         private System.Windows.Forms.ToolStripMenuItem menuUserManager;
@@ -850,6 +961,22 @@
         private ESRI.ArcGIS.Controls.AxMapControl axMapControl1;
         private ESRI.ArcGIS.Controls.AxToolbarControl axToolbarControl1;
         private ESRI.ArcGIS.Controls.AxToolbarControl axToolbarControl2;
+        private System.Windows.Forms.ToolStripMenuItem menuLineIntersectCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuLineCloseCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuAreaCloseCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuIncludeAnaCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuLineThornCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuAreaThornCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuAreaHollowCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuLittleAreaCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuLittleLineCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuFormatCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuWholeCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuMapunitWholeCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuFeatureWholeCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuPosQuaCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuExtentCheck;
+        private System.Windows.Forms.ToolStripMenuItem menuRasterQuaCheck;
     }
 }
 
