@@ -115,12 +115,12 @@
             this.menuFeatureWholeCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPosQuaCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExtentCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRasterQuaCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStatistic = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUserManager = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.axToolbarControl1 = new ESRI.ArcGIS.Controls.AxToolbarControl();
             this.axToolbarControl2 = new ESRI.ArcGIS.Controls.AxToolbarControl();
-            this.menuRasterQuaCheck = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -577,21 +577,21 @@
             // menuAddShp
             // 
             this.menuAddShp.Name = "menuAddShp";
-            this.menuAddShp.Size = new System.Drawing.Size(148, 22);
+            this.menuAddShp.Size = new System.Drawing.Size(152, 22);
             this.menuAddShp.Text = "导入shp数据";
             this.menuAddShp.Click += new System.EventHandler(this.menuAddShp_Click);
             // 
             // menuAddImg
             // 
             this.menuAddImg.Name = "menuAddImg";
-            this.menuAddImg.Size = new System.Drawing.Size(148, 22);
+            this.menuAddImg.Size = new System.Drawing.Size(152, 22);
             this.menuAddImg.Text = "导入影像数据";
             this.menuAddImg.Click += new System.EventHandler(this.menuAddImg_Click);
             // 
             // menuAddGdb
             // 
             this.menuAddGdb.Name = "menuAddGdb";
-            this.menuAddGdb.Size = new System.Drawing.Size(148, 22);
+            this.menuAddGdb.Size = new System.Drawing.Size(152, 22);
             this.menuAddGdb.Text = "导入gdb数据";
             this.menuAddGdb.Click += new System.EventHandler(this.menuAddGdb_Click);
             // 
@@ -730,31 +730,31 @@
             // menuLineThornCheck
             // 
             this.menuLineThornCheck.Name = "menuLineThornCheck";
-            this.menuLineThornCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuLineThornCheck.Size = new System.Drawing.Size(136, 22);
             this.menuLineThornCheck.Text = "线折刺检查";
             // 
             // menuAreaThornCheck
             // 
             this.menuAreaThornCheck.Name = "menuAreaThornCheck";
-            this.menuAreaThornCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuAreaThornCheck.Size = new System.Drawing.Size(136, 22);
             this.menuAreaThornCheck.Text = "面折刺检查";
             // 
             // menuAreaHollowCheck
             // 
             this.menuAreaHollowCheck.Name = "menuAreaHollowCheck";
-            this.menuAreaHollowCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuAreaHollowCheck.Size = new System.Drawing.Size(136, 22);
             this.menuAreaHollowCheck.Text = "面空洞检查";
             // 
             // menuLittleAreaCheck
             // 
             this.menuLittleAreaCheck.Name = "menuLittleAreaCheck";
-            this.menuLittleAreaCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuLittleAreaCheck.Size = new System.Drawing.Size(136, 22);
             this.menuLittleAreaCheck.Text = "碎面检查";
             // 
             // menuLittleLineCheck
             // 
             this.menuLittleLineCheck.Name = "menuLittleLineCheck";
-            this.menuLittleLineCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuLittleLineCheck.Size = new System.Drawing.Size(136, 22);
             this.menuLittleLineCheck.Text = "碎线检查";
             // 
             // menuFormatCheck
@@ -798,6 +798,12 @@
             this.menuExtentCheck.Size = new System.Drawing.Size(124, 22);
             this.menuExtentCheck.Text = "边界检查";
             // 
+            // menuRasterQuaCheck
+            // 
+            this.menuRasterQuaCheck.Name = "menuRasterQuaCheck";
+            this.menuRasterQuaCheck.Size = new System.Drawing.Size(160, 22);
+            this.menuRasterQuaCheck.Text = "影像质量检查";
+            // 
             // menuStatistic
             // 
             this.menuStatistic.Name = "menuStatistic";
@@ -837,12 +843,6 @@
             this.axToolbarControl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl2.OcxState")));
             this.axToolbarControl2.Size = new System.Drawing.Size(1031, 28);
             this.axToolbarControl2.TabIndex = 0;
-            // 
-            // menuRasterQuaCheck
-            // 
-            this.menuRasterQuaCheck.Name = "menuRasterQuaCheck";
-            this.menuRasterQuaCheck.Size = new System.Drawing.Size(160, 22);
-            this.menuRasterQuaCheck.Text = "影像质量检查";
             // 
             // MainForm
             // 

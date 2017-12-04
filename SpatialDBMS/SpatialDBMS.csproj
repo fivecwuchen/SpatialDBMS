@@ -124,6 +124,84 @@
     <Compile Include="Forms\FormAttribute.Designer.cs">
       <DependentUpon>FormAttribute.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormExtentCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormExtentCheck.Designer.cs">
+      <DependentUpon>FormExtentCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFeatureWholeCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFeatureWholeCheck.Designer.cs">
+      <DependentUpon>FormFeatureWholeCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormIncludeCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormIncludeCheck.Designer.cs">
+      <DependentUpon>FormIncludeCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLineCloseCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLineCloseCheck.Designer.cs">
+      <DependentUpon>FormLineCloseCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryByAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryByAttribute.Designer.cs">
+      <DependentUpon>FormQueryByAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryByMapSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryByMapSheet.Designer.cs">
+      <DependentUpon>FormQueryByMapSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryBySpatial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryBySpatial.Designer.cs">
+      <DependentUpon>FormQueryBySpatial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryByTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryByTime.Designer.cs">
+      <DependentUpon>FormQueryByTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryByUnionway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryByUnionway.Designer.cs">
+      <DependentUpon>FormQueryByUnionway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryShowResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryShowResult.Designer.cs">
+      <DependentUpon>FormQueryShowResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRasterCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRasterCheck.Designer.cs">
+      <DependentUpon>FormRasterCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStatistics.Designer.cs">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSurfaceFeatureCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSurfaceFeatureCheck.Designer.cs">
+      <DependentUpon>FormSurfaceFeatureCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormNormalCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +214,12 @@
     <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormTopoLineConnectCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTopoLineConnectCheck.Designer.cs">
+      <DependentUpon>FormTopoLineConnectCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +231,53 @@
     <EmbeddedResource Include="Forms\FormAttribute.resx">
       <DependentUpon>FormAttribute.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormExtentCheck.resx">
+      <DependentUpon>FormExtentCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFeatureWholeCheck.resx">
+      <DependentUpon>FormFeatureWholeCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormIncludeCheck.resx">
+      <DependentUpon>FormIncludeCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLineCloseCheck.resx">
+      <DependentUpon>FormLineCloseCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryByAttribute.resx">
+      <DependentUpon>FormQueryByAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryByMapSheet.resx">
+      <DependentUpon>FormQueryByMapSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryBySpatial.resx">
+      <DependentUpon>FormQueryBySpatial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryByTime.resx">
+      <DependentUpon>FormQueryByTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryByUnionway.resx">
+      <DependentUpon>FormQueryByUnionway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryShowResult.resx">
+      <DependentUpon>FormQueryShowResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRasterCheck.resx">
+      <DependentUpon>FormRasterCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSurfaceFeatureCheck.resx">
+      <DependentUpon>FormSurfaceFeatureCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormNormalCheck.resx">
       <DependentUpon>FormNormalCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTopoLineConnectCheck.resx">
+      <DependentUpon>FormTopoLineConnectCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
