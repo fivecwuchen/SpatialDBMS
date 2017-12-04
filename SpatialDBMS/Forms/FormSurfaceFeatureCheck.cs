@@ -46,6 +46,10 @@ namespace SpatialDBMS.Forms
         //窗体加载时执行本函数
         private void FormSurfaceFeatureCheck_Load(object sender, EventArgs e)
         {
+            if (currentMap == null)
+            {
+                MessageBox.Show("请加载图层或打开MXD文档");
+            }
             IFeatureLayer featureLayer; //设置临时变量存储矢量图层对象
 
             //将当前图层列表清空

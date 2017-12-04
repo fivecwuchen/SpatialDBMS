@@ -37,6 +37,10 @@ namespace SpatialDBMS.Forms
         }
         private void FormExtentCheck_Load(object sender, EventArgs e)
         {
+            if (currentMap == null)
+            {
+                MessageBox.Show("请加载图层或打开MXD文档");
+            }
             //将当前图层列表清空
             comLyr.Items.Clear();
 

@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("2015年长沙市影像");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("2010年长沙市影像");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("2005年长沙市影像");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("长沙市遥感影像", new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16,
-            treeNode17});
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("2015长沙市土地覆盖图");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("2010长沙市土地覆盖图");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("2005长沙市土地覆盖图");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("长沙市土地覆盖图", new System.Windows.Forms.TreeNode[] {
-            treeNode19,
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("长沙市行政区矢量图");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("2015长沙市建成区");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("2010长沙市建成区");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("2005长沙市建成区");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("长沙市建成区", new System.Windows.Forms.TreeNode[] {
-            treeNode24,
-            treeNode25,
-            treeNode26});
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("长沙市历年统计数据");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("2015年长沙市影像");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("2010年长沙市影像");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("2005年长沙市影像");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("长沙市遥感影像", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("2015长沙市土地覆盖图");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("2010长沙市土地覆盖图");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("2005长沙市土地覆盖图");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("长沙市土地覆盖图", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("长沙市行政区矢量图");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("2015长沙市建成区");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("2010长沙市建成区");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("2005长沙市建成区");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("长沙市建成区", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11,
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("长沙市历年统计数据");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -212,40 +212,40 @@
             this.treeView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView2.Location = new System.Drawing.Point(3, 3);
             this.treeView2.Name = "treeView2";
-            treeNode15.Name = "csimage2015";
-            treeNode15.Text = "2015年长沙市影像";
-            treeNode16.Name = "csimage2010";
-            treeNode16.Text = "2010年长沙市影像";
-            treeNode17.Name = "csimage2005";
-            treeNode17.Text = "2005年长沙市影像";
-            treeNode18.Name = "csimage";
-            treeNode18.Text = "长沙市遥感影像";
-            treeNode19.Name = "cslanduse2015";
-            treeNode19.Text = "2015长沙市土地覆盖图";
-            treeNode20.Name = "cslanduse2010";
-            treeNode20.Text = "2010长沙市土地覆盖图";
-            treeNode21.Name = "cslanduse2005";
-            treeNode21.Text = "2005长沙市土地覆盖图";
-            treeNode22.Name = "cslanduse";
-            treeNode22.Text = "长沙市土地覆盖图";
-            treeNode23.Name = "csadmin";
-            treeNode23.Text = "长沙市行政区矢量图";
-            treeNode24.Name = "csbuild2015";
-            treeNode24.Text = "2015长沙市建成区";
-            treeNode25.Name = "csbuild2010";
-            treeNode25.Text = "2010长沙市建成区";
-            treeNode26.Name = "csbuild2005";
-            treeNode26.Text = "2005长沙市建成区";
-            treeNode27.Name = "csbuild";
-            treeNode27.Text = "长沙市建成区";
-            treeNode28.Name = "csstasticinfo";
-            treeNode28.Text = "长沙市历年统计数据";
+            treeNode1.Name = "csimage2015";
+            treeNode1.Text = "2015年长沙市影像";
+            treeNode2.Name = "csimage2010";
+            treeNode2.Text = "2010年长沙市影像";
+            treeNode3.Name = "csimage2005";
+            treeNode3.Text = "2005年长沙市影像";
+            treeNode4.Name = "csimage";
+            treeNode4.Text = "长沙市遥感影像";
+            treeNode5.Name = "cslanduse2015";
+            treeNode5.Text = "2015长沙市土地覆盖图";
+            treeNode6.Name = "cslanduse2010";
+            treeNode6.Text = "2010长沙市土地覆盖图";
+            treeNode7.Name = "cslanduse2005";
+            treeNode7.Text = "2005长沙市土地覆盖图";
+            treeNode8.Name = "cslanduse";
+            treeNode8.Text = "长沙市土地覆盖图";
+            treeNode9.Name = "csadmin";
+            treeNode9.Text = "长沙市行政区矢量图";
+            treeNode10.Name = "csbuild2015";
+            treeNode10.Text = "2015长沙市建成区";
+            treeNode11.Name = "csbuild2010";
+            treeNode11.Text = "2010长沙市建成区";
+            treeNode12.Name = "csbuild2005";
+            treeNode12.Text = "2005长沙市建成区";
+            treeNode13.Name = "csbuild";
+            treeNode13.Text = "长沙市建成区";
+            treeNode14.Name = "csstasticinfo";
+            treeNode14.Text = "长沙市历年统计数据";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode18,
-            treeNode22,
-            treeNode23,
-            treeNode27,
-            treeNode28});
+            treeNode4,
+            treeNode8,
+            treeNode9,
+            treeNode13,
+            treeNode14});
             this.treeView2.Size = new System.Drawing.Size(134, 540);
             this.treeView2.TabIndex = 1;
             // 
@@ -780,14 +780,15 @@
             // menuMapunitWholeCheck
             // 
             this.menuMapunitWholeCheck.Name = "menuMapunitWholeCheck";
-            this.menuMapunitWholeCheck.Size = new System.Drawing.Size(124, 22);
+            this.menuMapunitWholeCheck.Size = new System.Drawing.Size(152, 22);
             this.menuMapunitWholeCheck.Text = "图幅检查";
             // 
             // menuFeatureWholeCheck
             // 
             this.menuFeatureWholeCheck.Name = "menuFeatureWholeCheck";
-            this.menuFeatureWholeCheck.Size = new System.Drawing.Size(124, 22);
+            this.menuFeatureWholeCheck.Size = new System.Drawing.Size(152, 22);
             this.menuFeatureWholeCheck.Text = "要素检查";
+            this.menuFeatureWholeCheck.Click += new System.EventHandler(this.menuFeatureWholeCheck_Click);
             // 
             // menuPosQuaCheck
             // 
@@ -800,7 +801,7 @@
             // menuExtentCheck
             // 
             this.menuExtentCheck.Name = "menuExtentCheck";
-            this.menuExtentCheck.Size = new System.Drawing.Size(152, 22);
+            this.menuExtentCheck.Size = new System.Drawing.Size(124, 22);
             this.menuExtentCheck.Text = "边界检查";
             this.menuExtentCheck.Click += new System.EventHandler(this.menuExtentCheck_Click);
             // 

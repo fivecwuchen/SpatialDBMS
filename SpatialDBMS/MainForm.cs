@@ -408,5 +408,12 @@ namespace SpatialDBMS
             extentCheck.CurrentMap = axMapControl1.Map;
             extentCheck.Show();
         }
+        //要素完整性检查
+        private void menuFeatureWholeCheck_Click(object sender, EventArgs e)
+        {
+            FormFeatureWholeCheck wholeFeatureCheck = new FormFeatureWholeCheck();
+            wholeFeatureCheck.CurrentMap = axMapControl1.Map;
+            wholeFeatureCheck.Show();
+        }
     }
 }
