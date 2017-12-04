@@ -577,21 +577,21 @@
             // menuAddShp
             // 
             this.menuAddShp.Name = "menuAddShp";
-            this.menuAddShp.Size = new System.Drawing.Size(152, 22);
+            this.menuAddShp.Size = new System.Drawing.Size(148, 22);
             this.menuAddShp.Text = "导入shp数据";
             this.menuAddShp.Click += new System.EventHandler(this.menuAddShp_Click);
             // 
             // menuAddImg
             // 
             this.menuAddImg.Name = "menuAddImg";
-            this.menuAddImg.Size = new System.Drawing.Size(152, 22);
+            this.menuAddImg.Size = new System.Drawing.Size(148, 22);
             this.menuAddImg.Text = "导入影像数据";
             this.menuAddImg.Click += new System.EventHandler(this.menuAddImg_Click);
             // 
             // menuAddGdb
             // 
             this.menuAddGdb.Name = "menuAddGdb";
-            this.menuAddGdb.Size = new System.Drawing.Size(152, 22);
+            this.menuAddGdb.Size = new System.Drawing.Size(148, 22);
             this.menuAddGdb.Text = "导入gdb数据";
             this.menuAddGdb.Click += new System.EventHandler(this.menuAddGdb_Click);
             // 
@@ -732,30 +732,35 @@
             this.menuLineThornCheck.Name = "menuLineThornCheck";
             this.menuLineThornCheck.Size = new System.Drawing.Size(136, 22);
             this.menuLineThornCheck.Text = "线折刺检查";
+            this.menuLineThornCheck.Click += new System.EventHandler(this.menuLineThornCheck_Click);
             // 
             // menuAreaThornCheck
             // 
             this.menuAreaThornCheck.Name = "menuAreaThornCheck";
             this.menuAreaThornCheck.Size = new System.Drawing.Size(136, 22);
             this.menuAreaThornCheck.Text = "面折刺检查";
+            this.menuAreaThornCheck.Click += new System.EventHandler(this.menuAreaThornCheck_Click);
             // 
             // menuAreaHollowCheck
             // 
             this.menuAreaHollowCheck.Name = "menuAreaHollowCheck";
             this.menuAreaHollowCheck.Size = new System.Drawing.Size(136, 22);
             this.menuAreaHollowCheck.Text = "面空洞检查";
+            this.menuAreaHollowCheck.Click += new System.EventHandler(this.menuAreaHollowCheck_Click);
             // 
             // menuLittleAreaCheck
             // 
             this.menuLittleAreaCheck.Name = "menuLittleAreaCheck";
             this.menuLittleAreaCheck.Size = new System.Drawing.Size(136, 22);
             this.menuLittleAreaCheck.Text = "碎面检查";
+            this.menuLittleAreaCheck.Click += new System.EventHandler(this.menuLittleAreaCheck_Click);
             // 
             // menuLittleLineCheck
             // 
             this.menuLittleLineCheck.Name = "menuLittleLineCheck";
             this.menuLittleLineCheck.Size = new System.Drawing.Size(136, 22);
             this.menuLittleLineCheck.Text = "碎线检查";
+            this.menuLittleLineCheck.Click += new System.EventHandler(this.menuLittleLineCheck_Click);
             // 
             // menuFormatCheck
             // 

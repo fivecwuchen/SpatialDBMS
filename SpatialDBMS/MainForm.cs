@@ -351,12 +351,55 @@ namespace SpatialDBMS
         {
 
         }
-
+        //现势性检查
         private void menuTimeCheck_Click(object sender, EventArgs e)
         {
 
         }
+        //
+        private void menuLittleLineCheck_Click(object sender, EventArgs e)
+        {
+            FormSurfaceFeatureCheck surfaceFeatureCheck = new FormSurfaceFeatureCheck();
+            surfaceFeatureCheck.Text = "碎线检查";
+            surfaceFeatureCheck.CurrentMap = axMapControl1.Map;
+            surfaceFeatureCheck.type = 5;
+            surfaceFeatureCheck.Show();
+        }
 
-      
+        private void menuLittleAreaCheck_Click(object sender, EventArgs e)
+        {
+            FormSurfaceFeatureCheck surfaceFeatureCheck = new FormSurfaceFeatureCheck();
+            surfaceFeatureCheck.Text = "碎面检查";
+            surfaceFeatureCheck.type = 4;
+            surfaceFeatureCheck.CurrentMap = axMapControl1.Map;
+            surfaceFeatureCheck.Show();
+        }
+
+        private void menuAreaHollowCheck_Click(object sender, EventArgs e)
+        {
+            FormSurfaceFeatureCheck surfaceFeatureCheck = new FormSurfaceFeatureCheck();
+            surfaceFeatureCheck.Text = "面空洞检查";
+            surfaceFeatureCheck.type = 3;
+            surfaceFeatureCheck.CurrentMap = axMapControl1.Map;
+            surfaceFeatureCheck.Show();
+        }
+
+        private void menuAreaThornCheck_Click(object sender, EventArgs e)
+        {
+            FormSurfaceFeatureCheck surfaceFeatureCheck = new FormSurfaceFeatureCheck();
+            surfaceFeatureCheck.Text = "面折刺检查";
+            surfaceFeatureCheck.CurrentMap = axMapControl1.Map;
+            surfaceFeatureCheck.type = 2;
+            surfaceFeatureCheck.Show();
+        }
+
+        private void menuLineThornCheck_Click(object sender, EventArgs e)
+        {
+            FormSurfaceFeatureCheck surfaceFeatureCheck = new FormSurfaceFeatureCheck();
+            surfaceFeatureCheck.Text = "线折刺检查";
+            surfaceFeatureCheck.CurrentMap = axMapControl1.Map;
+            surfaceFeatureCheck.type = 1;
+            surfaceFeatureCheck.Show();
+        }
     }
 }
