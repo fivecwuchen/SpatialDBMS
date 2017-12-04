@@ -65,7 +65,7 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -333,15 +333,6 @@
     </COMReference>
     <COMReference Include="esriCarto">
       <Guid>{45AC68FF-DEFF-4884-B3A9-7D882EDCAEF1}</Guid>
-      <VersionMajor>10</VersionMajor>
-      <VersionMinor>2</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="esriDataSourcesFile">
-      <Guid>{1CE6AC65-43F5-4529-8FC0-D7ED298E4F1A}</Guid>
       <VersionMajor>10</VersionMajor>
       <VersionMinor>2</VersionMinor>
       <Lcid>0</Lcid>

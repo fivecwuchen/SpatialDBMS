@@ -30,10 +30,11 @@
         {
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnSelectAll = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comLyr = new System.Windows.Forms.ComboBox();
             this.checkedListBoxLyr = new System.Windows.Forms.CheckedListBox();
+            this.btnSelectSwitch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancle
@@ -44,6 +45,7 @@
             this.btnCancle.TabIndex = 14;
             this.btnCancle.Text = "取消";
             this.btnCancle.UseVisualStyleBackColor = true;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
             // btnOk
             // 
@@ -53,15 +55,17 @@
             this.btnOk.TabIndex = 15;
             this.btnOk.Text = "确定";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // btnRemove
+            // btnSelectAll
             // 
-            this.btnRemove.Location = new System.Drawing.Point(189, 54);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnRemove.TabIndex = 16;
-            this.btnRemove.Text = "移除";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnSelectAll.Location = new System.Drawing.Point(189, 54);
+            this.btnSelectAll.Name = "btnSelectAll";
+            this.btnSelectAll.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectAll.TabIndex = 16;
+            this.btnSelectAll.Text = "全选";
+            this.btnSelectAll.UseVisualStyleBackColor = true;
+            this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
             // 
             // label1
             // 
@@ -79,14 +83,26 @@
             this.comLyr.Name = "comLyr";
             this.comLyr.Size = new System.Drawing.Size(243, 20);
             this.comLyr.TabIndex = 12;
+            this.comLyr.SelectedIndexChanged += new System.EventHandler(this.comLyr_SelectedIndexChanged);
             // 
             // checkedListBoxLyr
             // 
+            this.checkedListBoxLyr.CheckOnClick = true;
             this.checkedListBoxLyr.FormattingEnabled = true;
             this.checkedListBoxLyr.Location = new System.Drawing.Point(21, 54);
             this.checkedListBoxLyr.Name = "checkedListBoxLyr";
             this.checkedListBoxLyr.Size = new System.Drawing.Size(162, 180);
             this.checkedListBoxLyr.TabIndex = 17;
+            // 
+            // btnSelectSwitch
+            // 
+            this.btnSelectSwitch.Location = new System.Drawing.Point(189, 83);
+            this.btnSelectSwitch.Name = "btnSelectSwitch";
+            this.btnSelectSwitch.Size = new System.Drawing.Size(75, 23);
+            this.btnSelectSwitch.TabIndex = 16;
+            this.btnSelectSwitch.Text = "反选";
+            this.btnSelectSwitch.UseVisualStyleBackColor = true;
+            this.btnSelectSwitch.Click += new System.EventHandler(this.btnSelectSwitch_Click);
             // 
             // FormSurfaceFeatureCheck
             // 
@@ -96,11 +112,13 @@
             this.Controls.Add(this.checkedListBoxLyr);
             this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnSelectSwitch);
+            this.Controls.Add(this.btnSelectAll);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comLyr);
             this.Name = "FormSurfaceFeatureCheck";
             this.Text = "FormSurfaceFeatureCheck";
+            this.Load += new System.EventHandler(this.FormSurfaceFeatureCheck_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,9 +128,10 @@
 
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnSelectAll;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comLyr;
         private System.Windows.Forms.CheckedListBox checkedListBoxLyr;
+        private System.Windows.Forms.Button btnSelectSwitch;
     }
 }
