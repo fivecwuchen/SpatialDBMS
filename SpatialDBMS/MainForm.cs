@@ -401,5 +401,12 @@ namespace SpatialDBMS
             surfaceFeatureCheck.type = 1;
             surfaceFeatureCheck.Show();
         }
+        //边界范围检查
+        private void menuExtentCheck_Click(object sender, EventArgs e)
+        {
+            FormExtentCheck extentCheck = new FormExtentCheck();
+            extentCheck.CurrentMap = axMapControl1.Map;
+            extentCheck.Show();
+        }
     }
 }

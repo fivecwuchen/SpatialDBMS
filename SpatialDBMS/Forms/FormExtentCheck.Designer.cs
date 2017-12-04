@@ -39,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textYMax = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMeta = new System.Windows.Forms.TextBox();
             this.btnLoadMetaData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             // 
             this.textXMin.Location = new System.Drawing.Point(53, 68);
             this.textXMin.Name = "textXMin";
+            this.textXMin.ReadOnly = true;
             this.textXMin.Size = new System.Drawing.Size(123, 21);
             this.textXMin.TabIndex = 11;
             // 
@@ -89,6 +90,7 @@
             // 
             this.textXMax.Location = new System.Drawing.Point(233, 68);
             this.textXMax.Name = "textXMax";
+            this.textXMax.ReadOnly = true;
             this.textXMax.Size = new System.Drawing.Size(126, 21);
             this.textXMax.TabIndex = 11;
             // 
@@ -105,6 +107,7 @@
             // 
             this.textYMin.Location = new System.Drawing.Point(53, 106);
             this.textYMin.Name = "textYMin";
+            this.textYMin.ReadOnly = true;
             this.textYMin.Size = new System.Drawing.Size(123, 21);
             this.textYMin.TabIndex = 11;
             // 
@@ -121,6 +124,7 @@
             // 
             this.textYMax.Location = new System.Drawing.Point(233, 109);
             this.textYMax.Name = "textYMax";
+            this.textYMax.ReadOnly = true;
             this.textYMax.Size = new System.Drawing.Size(126, 21);
             this.textYMax.TabIndex = 11;
             // 
@@ -132,14 +136,17 @@
             this.btnOk.TabIndex = 12;
             this.btnOk.Text = "确定";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // textBox1
+            // textBoxMeta
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 151);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(267, 83);
-            this.textBox1.TabIndex = 13;
+            this.textBoxMeta.Location = new System.Drawing.Point(11, 187);
+            this.textBoxMeta.Multiline = true;
+            this.textBoxMeta.Name = "textBoxMeta";
+            this.textBoxMeta.ReadOnly = true;
+            this.textBoxMeta.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxMeta.Size = new System.Drawing.Size(348, 83);
+            this.textBoxMeta.TabIndex = 13;
             // 
             // btnLoadMetaData
             // 
@@ -149,13 +156,14 @@
             this.btnLoadMetaData.TabIndex = 12;
             this.btnLoadMetaData.Text = "读入元数据";
             this.btnLoadMetaData.UseVisualStyleBackColor = true;
+            this.btnLoadMetaData.Click += new System.EventHandler(this.btnLoadMetaData_Click);
             // 
             // FormExtentCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 261);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(371, 301);
+            this.Controls.Add(this.textBoxMeta);
             this.Controls.Add(this.btnLoadMetaData);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.textYMax);
@@ -170,6 +178,7 @@
             this.Controls.Add(this.comLyr);
             this.Name = "FormExtentCheck";
             this.Text = "边界范围检查";
+            this.Load += new System.EventHandler(this.FormExtentCheck_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,7 +197,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textYMax;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMeta;
         private System.Windows.Forms.Button btnLoadMetaData;
     }
 }
